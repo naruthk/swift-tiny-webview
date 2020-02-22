@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WebViewForTesting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7g5-Wl-Atj">
+                                <rect key="frame" x="0.0" y="139" width="375" height="639"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <searchBar contentMode="redraw" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Da1-Uw-5Rk">
+                                <rect key="frame" x="16" y="44" width="343" height="56"/>
+                                <color key="barTintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="go" textContentType="url"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="jUp-kC-nQF"/>
+                                </connections>
+                            </searchBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="access_token" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D1c-Ds-OyQ">
+                                <rect key="frame" x="16" y="101" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="D1c-Ds-OyQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="101" id="53B-kY-fBM"/>
+                            <constraint firstItem="D1c-Ds-OyQ" firstAttribute="trailing" secondItem="Da1-Uw-5Rk" secondAttribute="trailing" id="69I-IQ-SVo"/>
+                            <constraint firstItem="7g5-Wl-Atj" firstAttribute="centerX" secondItem="D1c-Ds-OyQ" secondAttribute="centerX" id="9fq-u3-HQp"/>
+                            <constraint firstItem="7g5-Wl-Atj" firstAttribute="top" secondItem="D1c-Ds-OyQ" secondAttribute="bottom" constant="8" symbolic="YES" id="AIy-9j-2Mb"/>
+                            <constraint firstItem="D1c-Ds-OyQ" firstAttribute="top" secondItem="Da1-Uw-5Rk" secondAttribute="bottom" constant="1" id="FVp-ae-GgE"/>
+                            <constraint firstItem="7g5-Wl-Atj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="KDS-3w-xkQ"/>
+                            <constraint firstItem="D1c-Ds-OyQ" firstAttribute="leading" secondItem="Da1-Uw-5Rk" secondAttribute="leading" id="Ofl-4c-fyK"/>
+                            <constraint firstItem="7g5-Wl-Atj" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="OkT-Sf-mkQ"/>
+                            <constraint firstItem="D1c-Ds-OyQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="tci-PJ-SfZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D1c-Ds-OyQ" secondAttribute="trailing" constant="16" id="xbX-Jg-Pzn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="accessTokenInput" destination="D1c-Ds-OyQ" id="lV8-ks-2l6"/>
+                        <outlet property="searchBar" destination="Da1-Uw-5Rk" id="AP6-KN-4Ok"/>
+                        <outlet property="webView" destination="7g5-Wl-Atj" id="Xl2-CO-hYG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.00492610837438"/>
+        </scene>
+    </scenes>
+</document>
