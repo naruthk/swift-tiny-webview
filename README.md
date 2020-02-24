@@ -2,6 +2,8 @@
 
 This webview application sends a `POST` request to the specified URL with an access token field as a body parameter.
 
+![Interface](interface.png)
+
 Default URL points to "https://p2dev.trueyou.co.th/" unless changed inside `ViewController.swift`
 
 ## Development
